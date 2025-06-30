@@ -14,8 +14,6 @@ jobs:
           git branch
 
       - uses: actions/checkout@v4
-        with:
-          ref: main
       - run: |
           ls -a
           echo ""
