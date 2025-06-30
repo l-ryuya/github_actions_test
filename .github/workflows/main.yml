@@ -8,10 +8,4 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          echo $PWD
-          echo ""
-          echo ls -la
-          echo ""
-          git branch --contains
-          echo ""
-          git branch
+          git branch -r
