@@ -1,9 +1,12 @@
-name: main_file  # ← test2.yml の `workflow_run.workflows` で参照される名前！
+name: Run Build
 
-on: [push]
+on:
+  workflow_dispatch:
 
 jobs:
-  main:
+  run-build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "メインファイルです"
+      - name: Run Build
+        run: |
+          echo "Run Build"
