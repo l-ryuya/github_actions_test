@@ -1,7 +1,11 @@
 name: テスト１実行環境
-on: [push]
+on:
+  workflow_run:
+    workflows: ["テスト２実行環境"]
+    types:
+      - completed
 jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "ファイル１です"
+      - run: echo "test2ファイルの処理が終わったら実行しますファイル1です"
