@@ -1,4 +1,4 @@
-name: test1_file
+name: test
 
 on:
   workflow_run:
@@ -7,7 +7,9 @@ on:
       - completed
 
 jobs:
-  test1:
+  run-test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "test2ファイルの処理が終わったら実行しますファイル1です"
+      - name: test1
+        run: |
+          echo "Run Test後に実行"
