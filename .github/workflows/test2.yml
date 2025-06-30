@@ -1,9 +1,11 @@
 name: test2_file
+
 on:
   workflow_run:
-    workflows: ["main_file"]
+    workflows: ["main_file"]  # ← main.yml の name: に一致している必要あり
     types:
       - completed
+
 jobs:
   test1:
     runs-on: ubuntu-latest

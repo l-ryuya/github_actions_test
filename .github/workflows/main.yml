@@ -1,5 +1,7 @@
-name: main_file
+name: main_file  # ← test2.yml の `workflow_run.workflows` で参照される名前！
+
 on: [push]
+
 jobs:
   test1:
     runs-on: ubuntu-latest
