@@ -7,11 +7,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      # - run: |
-      #     echo $PWD
-      #     echo ""
-      #     echo ls -la
-      #     echo ""
-      #     git branch --contains
-      #     echo ""
-      #     git branch
+      - run: |
+          echo $PWD
+          echo ""
+          echo ls -la
+          echo ""
+          git branch --contains
+          echo ""
+          git branch
