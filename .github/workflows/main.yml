@@ -1,4 +1,4 @@
-name: メイン実行環境
+name: main_file
 on: [push]
 jobs:
   test1:
