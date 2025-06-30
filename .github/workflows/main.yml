@@ -4,4 +4,8 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $PWD
+      - run: |
+          echo $PWD
+          echo ""
+          git branch --contains
+          git branch
