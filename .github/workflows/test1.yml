@@ -1,7 +1,7 @@
 name: test1_file
 on:
   workflow_run:
-    workflows: ["test2_file"]
+    workflows: [test2_file]
     types:
       - completed
 jobs:

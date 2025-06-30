@@ -3,7 +3,7 @@ name: main_file  # ← test2.yml の `workflow_run.workflows` で参照される
 on: [push]
 
 jobs:
-  test1:
+  main:
     runs-on: ubuntu-latest
     steps:
       - run: echo "メインファイルです"

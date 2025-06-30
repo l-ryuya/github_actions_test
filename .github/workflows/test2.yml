@@ -2,12 +2,12 @@ name: test2_file
 
 on:
   workflow_run:
-    workflows: ["main_file"]  # ← main.yml の name: に一致している必要あり
+    workflows: [main_file]  # ← main.yml の name: に一致している必要あり
     types:
       - completed
 
 jobs:
-  test1:
+  test2:
     runs-on: ubuntu-latest
     steps:
       - run: echo "メインファイルの処理が終わったら実行しますファイル2です"
