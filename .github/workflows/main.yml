@@ -12,9 +12,3 @@ jobs:
           ls -a
           echo ""
           git branch
-
-      - uses: actions/checkout@v4
-      - run: |
-          ls -a
-          echo ""
-          git branch
