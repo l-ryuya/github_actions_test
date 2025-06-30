@@ -8,4 +8,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
-          git branch -r
+          git fetch origin main
+          git fetch origin test1
