@@ -1,8 +1,7 @@
 
 name: Run Build
 
-on:
-  workflow_dispatch:
+on: [push]
 
 jobs:
   run-build:

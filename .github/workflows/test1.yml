@@ -1,11 +1,14 @@
-name: test1_file
+name: Run Deploy
+
 on:
   workflow_run:
-    workflows: [test2_file]
+    workflows: [Run Build]
     types:
       - completed
+
 jobs:
-  test1:
+  run-deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - run: echo "test2ファイルの処理が終わったら実行しますファイル1です"
+      - run: echo "Run Deploy - Run Testsが成功した後に実行"
