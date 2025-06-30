@@ -1,4 +1,4 @@
-name: test
+name: Run Deploy
 
 on:
   workflow_run:
@@ -7,9 +7,8 @@ on:
       - completed
 
 jobs:
-  run-test1:
+  run-deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: test1
-        run: |
-          echo "Run Test後に実行"
+      - run: echo "Run Deploy - Run Testsが成功した後に実行"
