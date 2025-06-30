@@ -8,12 +8,12 @@ jobs:
       - run: |
           ls -a
           echo ""
-          git branch -a
+          git log
 
       - uses: actions/checkout@v4
         with:
-          ref: main
+          fetch-depth: 0
       - run: |
           ls -a
           echo ""
-          git branch -a
+          git log
