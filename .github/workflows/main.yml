@@ -1,14 +1,13 @@
-name: Sample workflow
-on: 
-  push:
-    branches:
-      - main
+
+name: Run Build
+
+on:
+  workflow_dispatch:
+
 jobs:
-  test1:
+  run-build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: |
-          ls -a
-          echo ""
-          git branch
+      - name: Run Build
+        run: |
+          echo "Run Build"

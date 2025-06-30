@@ -1,0 +1,11 @@
+name: test1_file
+on:
+  workflow_run:
+    workflows: [test2_file]
+    types:
+      - completed
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "test2ファイルの処理が終わったら実行しますファイル1です"
