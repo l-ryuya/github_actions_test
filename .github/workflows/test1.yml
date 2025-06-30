@@ -4,4 +4,4 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "メインファイルです"
+      - run: echo "ファイル１です"
