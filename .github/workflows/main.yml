@@ -10,3 +10,5 @@ jobs:
       - run: |
           git fetch origin main
           git fetch origin test1
+
+          git diff --name-only origin/main origin/test1
