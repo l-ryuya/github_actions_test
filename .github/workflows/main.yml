@@ -1,7 +1,9 @@
 
 name: Run Build
 
-on: [push]
+on: 
+  push:
+  workflow_dispatch:
 
 jobs:
   run-build:
@@ -11,19 +13,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: test1
-        uses: "./.github/workflows/test1.yml"
+        uses: "./.github_actions_test/.github/workflows/test1.yml"
 
       - name: test2
-        uses: "./.github/workflows/test1.yml"
+        uses: "./.github_actions_test/.github/workflows/test1.yml"
         with:
           text: 'test2'
 
       - name: test3
-        uses: "./.github/workflows/test1.yml"
+        uses: "./.github_actions_test/.github/workflows/test1.yml"
         with:
           text: 'test3'
 
       - name: test3
-        uses: "./.github/workflows/test2.yml"
+        uses: "./.github_actions_test/.github/workflows/test2.yml"
         with:
           text: 'ファイル2のテスト１'
