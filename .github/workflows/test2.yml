@@ -1,23 +1,18 @@
-name: Run Tests
+name: test2YML
 
 on:
-  workflow_run:
-    workflows: [Run Build]
-    types:
-      - completed
+  workflow_call:
+    inputs:
+      text:
+        description: 'mainから値を受け取るテスト'
+        default: 'defaultです'
+        required: false
+        type: string
 
 jobs:
-  run-test:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+  cild2:
+    runs-on: ubunt-latest
     steps:
-      - name: Run Test
+      - name: テスト2
         run: |
-          echo "Run Test"
-  on-failure:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - name: failure
-        run: |
-          echo "trigger build workflow failed"
+          echo ${{inputs.text}}
