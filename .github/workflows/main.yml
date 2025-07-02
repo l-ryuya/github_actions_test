@@ -11,15 +11,18 @@ jobs:
 
   call-test1-2:
         uses: "./.github/workflows/test1.yml"
+        needs: call-test1-1
         with:
-          text: 'test3'
+          text: 'test2'
 
   call-test1-3:
         uses: "./.github/workflows/test1.yml"
+        needs: call-test1-2
         with:
           text: 'test3'
 
   call-test2-1:
         uses: "./.github/workflows/test2.yml"
+        needs: call-test1-3
         with:
           text: 'ファイル2のテスト１'
