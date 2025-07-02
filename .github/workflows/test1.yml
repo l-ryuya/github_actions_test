@@ -11,7 +11,7 @@ on:
 
 jobs:
   cild1:
-    runs-on: ubunt-latest
+    runs-on: ubuntu-latest
     steps:
       - name: テスト
         run: |

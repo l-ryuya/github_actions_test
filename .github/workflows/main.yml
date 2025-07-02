@@ -1,31 +1,25 @@
 
-name: Run Build
+name: main
 
 on: 
   push:
   workflow_dispatch:
 
 jobs:
-  run-build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: actions/checkout
-        uses: actions/checkout@v4
+  call-test1-1:
+      uses: "./.github/workflows/test1.yml"
 
-      - name: test1
-        uses: "./.github/workflows/test1.yml"
-
-      - name: test2
-        uses: "./.github/workflows/test1.yml"
-        with:
-          text: 'test2'
-
-      - name: test3
+  call-test1-2:
         uses: "./.github/workflows/test1.yml"
         with:
           text: 'test3'
 
-      - name: test3
+  call-test1-3:
+        uses: "./.github/workflows/test1.yml"
+        with:
+          text: 'test3'
+
+  call-test2-1:
         uses: "./.github/workflows/test2.yml"
         with:
           text: 'ファイル2のテスト１'
