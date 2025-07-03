@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
-      output1: ${{ steps.step1.outputs.test }}
+      output1: ${{ steps.step1.outputs.test3 }}
     env:
       TEST1: "hellow"
       TEST2: "world"
@@ -25,23 +25,52 @@ jobs:
       - env:
           OUTPUT1: ${{needs.job1.outputs.output1}}
         run: echo "$OUTPUT1"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
   
-  call-test1-1:
-      uses: "./.github/workflows/test1.yml"
+  # call-test1-1:
+  #     uses: "./.github/workflows/test1.yml"
 
-  call-test1-2:
-        uses: "./.github/workflows/test1.yml"
-        needs: call-test1-1
-        with:
-          text: 'test2'
+  # call-test1-2:
+  #       uses: "./.github/workflows/test1.yml"
+  #       needs: call-test1-1
+  #       with:
+  #         text: 'test2'
 
-  call-test1-3:
-        uses: "./.github/workflows/test1.yml"
-        needs: call-test1-2
-        with:
-          text: 'test3'
+  # call-test1-3:
+  #       uses: "./.github/workflows/test1.yml"
+  #       needs: call-test1-2
+  #       with:
+  #         text: 'test3'
 
-  call-test2-1:
-        uses: "./.github/workflows/test2.yml"
-        with:
-          text: 'ファイル2のテスト１'
+  # call-test2-1:
+  #       uses: "./.github/workflows/test2.yml"
+  #       with:
+  #         text: 'ファイル2のテスト１'
