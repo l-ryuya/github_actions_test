@@ -46,7 +46,7 @@ jobs:
       - name: Create index.html
         run: |
           mkdir -p ./out
-          cp -rfrontend/vue/dist ./out/
+          cp -r frontend/vue/dist ./out/
 
       # GitHub Pagesに公開
       # デフォルトではgh-pageeブランチにpushする
