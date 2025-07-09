@@ -27,6 +27,7 @@ jobs:
         with:
           # Deploy keysやPersonal access Tokensも使用可能
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
 
       - name: Create index.html
         run: |
