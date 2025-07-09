@@ -18,9 +18,9 @@ jobs:
       # 実際はGitリポジトリをチェックアウトしてそこからビルドすることが多い
       - name: Create index.html
         run: |
+          echo '<meta http-equiv="refresh" content="0; url=./out/">' > ./index.html
           mkdir -p ./out
-          echo '<meta http-equiv="refresh" content="0; url=out/">' > ./out/index.html
-          echo "hello, world!" >> ./out/index.html
+          echo "hello, world!" > ./out/index.html
 
 
       # GitHub Pagesに公開
