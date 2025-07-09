@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/github_actions_test/out/',  // ここを追加
   plugins: [
     vue(),
     vueDevTools(),
