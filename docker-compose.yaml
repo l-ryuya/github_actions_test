@@ -1,0 +1,12 @@
+services:
+  vue:
+    build: ./frontend/
+    volumes:
+      - type: bind
+        source: ./frontend/vue
+        target: /vue
+    ports:
+      - "8082:5173"
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1

@@ -32,7 +32,7 @@ jobs:
       - name: Create index.html
         run: |
           mkdir -p ./out
-          echo "hello, world!" > ./out/index.html
+          cp frontend/vue/dist ./out/
 
       # GitHub Pagesに公開
       # デフォルトではgh-pageeブランチにpushする
