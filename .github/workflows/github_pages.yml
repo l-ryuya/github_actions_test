@@ -19,7 +19,7 @@ jobs:
       - name: Create index.html
         run: |
           mkdir -p ./out
-          echo '<meta http-equiv="refresh" content="0; url=out/">' > ./out_redirect/index.html
+          echo '<meta http-equiv="refresh" content="0; url=out/">' > ./out/index.html
           echo "hello, world!" >> ./out/index.html
 
 
