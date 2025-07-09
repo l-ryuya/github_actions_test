@@ -17,6 +17,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies and build
+        working-directory: frontend/vue
+        run: |
+          yarn install
+          yarn build
+
       # GitHub Pagesに公開するファイルの作成
       # 実際はGitリポジトリをチェックアウトしてそこからビルドすることが多い
       - name: Create index.html
