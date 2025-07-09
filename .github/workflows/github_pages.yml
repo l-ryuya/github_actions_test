@@ -14,6 +14,9 @@ jobs:
       - ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       # GitHub Pagesに公開するファイルの作成
       # 実際はGitリポジトリをチェックアウトしてそこからビルドすることが多い
       - name: Create index.html
